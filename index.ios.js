@@ -8,13 +8,14 @@ import {
   FlatList,
   TouchableHighlight,
   Button,
-  TouchableOpacity
+  TouchableOpacity,
+  ActivityIndicator
 } from 'react-native';
 import {
   StackNavigator,
 } from 'react-navigation';
 
-
+// 只显示文字
 class TextScreen extends React.Component {
   static navigationOptions = {
     title: 'Text Screen',
@@ -27,41 +28,80 @@ class TextScreen extends React.Component {
   }
 }
 
+// 只有一个 WebView
 class ChatScreen extends React.Component {
   static navigationOptions = {
     title: 'Chat with Lucy',
   };
   render() {
+    const { params } = this.props.navigation.state;
     return (
       <WebView
-        source={{uri: 'https://www.bilibili.com/video/av11269785'}}
+        source={{uri: params.url}}
         style={{flex: 1, backgroundColor: "#f99"}}
       />
     );
   }
 }
 
+// 主页
 class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    }
+  }
   static navigationOptions = {
     title: 'Welcome',
   };
+
+  componentDidMount() {
+    this.makeRemoteRequest();
+  }
+
+  makeRemoteRequest = () => {
+    //const url = `https://106.75.130.23/api/newest`;
+    //const url = `https://facebook.github.io/react-native/movies.json`;
+    const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
+    //this.setState({ isLoading: false });
+    fetch(url)
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          isLoading: false
+        });
+      })
+      .catch(error => {
+        console.log('asdasd');
+        //this.setState({ error, isLoading: false });
+      });
+  };
+
   _renderItem(item) {
     return (
       <TouchableOpacity 
-        onPress={() => this.props.navigation.navigate("Text",{a: item.key})}
+        onPress={() => this.props.navigation.navigate("Chat",{a: item.key, url: item.url})}
       >
         <Text>{item.key}</Text>
       </TouchableOpacity>
     )
   }
   render() {
+    if (this.state.isLoading) {
+      return (
+        <View style={{flex: 1, paddingTop: 20}}>
+          <ActivityIndicator />
+        </View>
+      );
+    }
     const { navigate } = this.props.navigation;
     return ( 
       <View style={styles.container}>
         <FlatList
           data={[
-            {key: 'Devin'},
-            {key: 'Jackson'},
+            {key: 'Devin', url:'https://www.bilibili.com/video/av10808198/'},
+            {key: 'Jackson', url:'https://www.bilibili.com/video/av10789963/'},
             {key: 'James'},
             {key: 'Joel'},
             {key: 'John'},
