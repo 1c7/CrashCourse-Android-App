@@ -86,7 +86,7 @@ class HomeScreen extends React.Component {
     console.log(item);
     return (
       <TouchableOpacity 
-        onPress={() => this.props.navigation.navigate("Chat",{a: item.key, url: item.url})}
+        onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})}
       >
         <Text>{item.title}</Text>
       </TouchableOpacity>
