@@ -36,7 +36,7 @@ class NoteScreen extends React.Component {
     const { params } = this.props.navigation.state;
     return (
       <WebView
-        source={{uri: 'https://raw.githubusercontent.com/1c7/temp/master/newest.json'}}
+        source={{uri: 'https://algori.tech/about_cc'}}
         style={{flex: 1, backgroundColor: "#f99"}}
       />
     );
@@ -83,7 +83,9 @@ class HomeScreen extends React.Component {
   makeRemoteRequest = () => {
     //const url = `https://106.75.130.23/api/newest`; // 失败
     //const url = `https://facebook.github.io/react-native/movies.json`; // 成功
-    const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
+    //const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
+    const url = 'https://algori.tech/api/newest';
+    
     fetch(url)
       .then(res => res.json())
       .then(res => {
@@ -102,15 +104,17 @@ class HomeScreen extends React.Component {
   _renderItem(item) {
     //console.log(item);
     return (
-      <View style={{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}>
+      <View style = {{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}>
         <TouchableOpacity 
-          style={{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}
-          onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
-          <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-            style={{flex:1, height:100}} // 差不多了
-            resizeMode="cover"
+          style = {{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}
+          onPress = {() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
+          <Image source = {{uri: item.image}}
+            style = {{flex: 1, height: 110}} // 差不多了
+            resizeMode = "cover"
             />
           <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+            <Text>第 {item.number} 集</Text>
+            <Text>第 {item.number} 集</Text>
             <Text>{item.title}</Text>
             <Text>{item.translator}</Text>
           </View>
