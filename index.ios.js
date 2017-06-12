@@ -20,8 +20,9 @@ class TextScreen extends React.Component {
     title: 'Text Screen',
   };
   render() {
+    const { params } = this.props.navigation.state;
     return (
-      <Text>{item.key}</Text>
+      <Text>{params.a}</Text>
     );
   }
 }
@@ -47,7 +48,7 @@ class HomeScreen extends React.Component {
   _renderItem(item) {
     return (
       <TouchableOpacity 
-        onPress={() => this.props.navigation.navigate("Text",{a: item})}
+        onPress={() => this.props.navigation.navigate("Text",{a: item.key})}
       >
         <Text>{item.key}</Text>
       </TouchableOpacity>
