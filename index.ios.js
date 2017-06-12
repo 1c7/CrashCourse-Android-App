@@ -19,20 +19,35 @@ import {
 // 只显示文字, for test
 class TextScreen extends React.Component {
   static navigationOptions = {
-    title: 'Text Screen',
+    title: '说明',
   };
   render() {
-    const { params } = this.props.navigation.state;
     return (
-      <Text>{params.a}</Text>
+      <Text>12312312</Text>
     );
   }
 }
 
-// 只有一个 WebView
+// 说明：也是只有一个 WebView。能和另外的合并，但是先不管
+class NoteScreen extends React.Component {
+  static navigationOptions = {
+    title: '说明',
+  };
+  render() {
+    const { params } = this.props.navigation.state;
+    return (
+      <WebView
+        source={{uri: 'https://raw.githubusercontent.com/1c7/temp/master/newest.json'}}
+        style={{flex: 1, backgroundColor: "#f99"}}
+      />
+    );
+  }
+}
+
+// 这个是详情页：只有一个 WebView
 class ChatScreen extends React.Component {
   static navigationOptions = {
-    title: 'Chat with Lucy',
+    title: '要换这个标题',
   };
   render() {
     const { params } = this.props.navigation.state;
@@ -54,8 +69,12 @@ class HomeScreen extends React.Component {
       data: [],
     };
   }
-  static navigationOptions = {
-    title: '最新',
+  static navigationOptions = ({ navigation }) => {
+    const {state, setParams} = navigation;
+    return {
+      headerRight: <Button title="说明"  onPress={() => {navigation.navigate("Note")} }/>,
+      title: '最新'
+    };
   };
 
   componentDidMount() {
@@ -63,8 +82,8 @@ class HomeScreen extends React.Component {
   }
 
   makeRemoteRequest = () => {
-    //const url = `https://106.75.130.23/api/newest`;
-    //const url = `https://facebook.github.io/react-native/movies.json`;
+    //const url = `https://106.75.130.23/api/newest`; // 失败
+    //const url = `https://facebook.github.io/react-native/movies.json`; // 成功
     const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
     fetch(url)
       .then(res => res.json())
@@ -126,6 +145,7 @@ const SimpleApp = StackNavigator({
   Home: { screen: HomeScreen },
   Chat: { screen: ChatScreen },
   Text: { screen: TextScreen },
+  Note: { screen: NoteScreen },
 });
 
 const styles = StyleSheet.create({
