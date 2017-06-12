@@ -9,13 +9,14 @@ import {
   TouchableHighlight,
   Button,
   TouchableOpacity,
-  ActivityIndicator
+  ActivityIndicator,
+  Image
 } from 'react-native';
 import {
   StackNavigator,
 } from 'react-navigation';
 
-// 只显示文字
+// 只显示文字, for test
 class TextScreen extends React.Component {
   static navigationOptions = {
     title: 'Text Screen',
@@ -65,7 +66,6 @@ class HomeScreen extends React.Component {
     //const url = `https://106.75.130.23/api/newest`;
     //const url = `https://facebook.github.io/react-native/movies.json`;
     const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
-    //this.setState({ isLoading: false });
     fetch(url)
       .then(res => res.json())
       .then(res => {
@@ -78,17 +78,20 @@ class HomeScreen extends React.Component {
       })
       .catch(error => {
         console.log('Networking fail');
-        //this.setState({ error, isLoading: false });
       });
   };
 
   _renderItem(item) {
     //console.log(item);
     return (
-      <View style={{flex: 1, paddingTop: 20, backgroundColor: '#888'}}>
-      <TouchableOpacity onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
-        <Text>{item.title}</Text>
-      </TouchableOpacity>
+      <View style={{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}>
+        <TouchableOpacity 
+          style={{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}
+          onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
+          <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
+            style={{width: 50, height: 50}} />
+          <Text>{item.title}3</Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -104,8 +107,8 @@ class HomeScreen extends React.Component {
     return ( 
       <View style={styles.container}>
         <FlatList
-          data={ this.state.data }
-          style={{backgroundColor: '#000'}}
+          data = { this.state.data }
+          style = {{backgroundColor: '#000'}}
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
         />
@@ -120,52 +123,17 @@ const SimpleApp = StackNavigator({
   Text: { screen: TextScreen },
 });
 
-export default class haha extends Component {
-  _onPressButton() {
-    console.log("You tapped the button!");
-  }
-  render() {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          data={[
-            {key: 'Devin'},
-            {key: 'Jackson'},
-            {key: 'James'},
-            {key: 'Joel'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
-          ]}
-          renderItem={({item}) => (
-            <TouchableHighlight onPress={this._onPressButton}>
-            <Text style={styles.item}>{item.key}</Text>
-            </TouchableHighlight>
-          )}
-        />
-      </View>
-    );
-  }
-  
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'stretch', // 全宽了
     backgroundColor: '#f96',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
