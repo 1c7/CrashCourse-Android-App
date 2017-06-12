@@ -69,7 +69,7 @@ class HomeScreen extends React.Component {
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log("res ishere");
+        console.log("res is success get here");
         console.log(res);
         this.setState({
           data: res,
@@ -77,19 +77,19 @@ class HomeScreen extends React.Component {
         });
       })
       .catch(error => {
-        console.log('asdasd');
+        console.log('Networking fail');
         //this.setState({ error, isLoading: false });
       });
   };
 
   _renderItem(item) {
-    console.log(item);
+    //console.log(item);
     return (
-      <TouchableOpacity 
-        onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})}
-      >
+      <View style={{flex: 1, paddingTop: 20, backgroundColor: '#888'}}>
+      <TouchableOpacity onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
         <Text>{item.title}</Text>
       </TouchableOpacity>
+      </View>
     )
   }
   render() {
@@ -104,16 +104,10 @@ class HomeScreen extends React.Component {
     return ( 
       <View style={styles.container}>
         <FlatList
-          data={
-            this.state.data
-          }
+          data={ this.state.data }
+          style={{backgroundColor: '#000'}}
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
-        />
-        <Text>Hello, Chat App!</Text>
-        <Button
-          onPress={() => navigate('Chat')}
-          title="Chat with Lucy"
         />
       </View>
     )
