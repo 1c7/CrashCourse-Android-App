@@ -89,8 +89,12 @@ class HomeScreen extends React.Component {
           style={{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}
           onPress={() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
           <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}
-            style={{width: 50, height: 50}} />
-          <Text>{item.title}3</Text>
+            style={{flex:1, height:100}} // 差不多了
+            resizeMode="cover"
+            />
+          <View style={{flex:1}}>
+            <Text>{item.title}</Text>
+          </View>
         </TouchableOpacity>
       </View>
     )
