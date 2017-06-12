@@ -49,11 +49,12 @@ class HomeScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
-    }
+      isLoading: true,
+      data: [],
+    };
   }
   static navigationOptions = {
-    title: 'Welcome',
+    title: '最新',
   };
 
   componentDidMount() {
@@ -68,7 +69,10 @@ class HomeScreen extends React.Component {
     fetch(url)
       .then(res => res.json())
       .then(res => {
+        console.log("res ishere");
+        console.log(res);
         this.setState({
+          data: res,
           isLoading: false
         });
       })
@@ -79,11 +83,12 @@ class HomeScreen extends React.Component {
   };
 
   _renderItem(item) {
+    console.log(item);
     return (
       <TouchableOpacity 
         onPress={() => this.props.navigation.navigate("Chat",{a: item.key, url: item.url})}
       >
-        <Text>{item.key}</Text>
+        <Text>{item.title}</Text>
       </TouchableOpacity>
     )
   }
@@ -99,16 +104,9 @@ class HomeScreen extends React.Component {
     return ( 
       <View style={styles.container}>
         <FlatList
-          data={[
-            {key: 'Devin', url:'https://www.bilibili.com/video/av10808198/'},
-            {key: 'Jackson', url:'https://www.bilibili.com/video/av10789963/'},
-            {key: 'James'},
-            {key: 'Joel'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
-          ]}
+          data={
+            this.state.data
+          }
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
         />
