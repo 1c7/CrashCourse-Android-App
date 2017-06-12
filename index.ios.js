@@ -6,7 +6,6 @@ import {
   View,
   WebView,
   FlatList,
-  TouchableHighlight,
   Button,
   TouchableOpacity,
   ActivityIndicator,
@@ -16,7 +15,7 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-// 只显示文字, for test
+// 只显示 test 文字
 class TextScreen extends React.Component {
   static navigationOptions = {
     title: '说明',
@@ -142,23 +141,17 @@ class HomeScreen extends React.Component {
 }
 
 const SimpleApp = StackNavigator({
-  Home: { screen: HomeScreen },
-  Chat: { screen: ChatScreen },
-  Text: { screen: TextScreen },
-  Note: { screen: NoteScreen },
+  Home: { screen: HomeScreen }, // 首页
+  Chat: { screen: ChatScreen }, // 视频详细页
+  Text: { screen: TextScreen }, // 测试页面
+  Note: { screen: NoteScreen }, // 说明
 });
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch', // 全宽了
-    backgroundColor: '#f96',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    alignItems: 'stretch', // 全宽
   },
 });
 
