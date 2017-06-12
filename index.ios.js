@@ -92,8 +92,9 @@ class HomeScreen extends React.Component {
             style={{flex:1, height:100}} // 差不多了
             resizeMode="cover"
             />
-          <View style={{flex:1}}>
+          <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
             <Text>{item.title}</Text>
+            <Text>{item.translator}</Text>
           </View>
         </TouchableOpacity>
       </View>
