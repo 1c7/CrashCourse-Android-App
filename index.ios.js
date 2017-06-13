@@ -71,7 +71,7 @@ class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const {state, setParams} = navigation;
     return {
-      headerRight: <Button title="说明"  onPress={() => {navigation.navigate("Note")} }/>,
+      headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
       title: '最新'
     };
   };
@@ -81,11 +81,7 @@ class HomeScreen extends React.Component {
   }
 
   makeRemoteRequest = () => {
-    //const url = `https://106.75.130.23/api/newest`; // 失败
-    //const url = `https://facebook.github.io/react-native/movies.json`; // 成功
-    //const url = 'https://raw.githubusercontent.com/1c7/temp/master/newest.json';
-    const url = 'https://algori.tech/api/newest';
-    
+    const url = 'https://algori.tech/api/newest';    
     fetch(url)
       .then(res => res.json())
       .then(res => {
@@ -104,19 +100,25 @@ class HomeScreen extends React.Component {
   _renderItem(item) {
     //console.log(item);
     return (
-      <View style = {{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}>
+      <View style = {{flex: 1, flexDirection: 'row', backgroundColor: '#fff', borderBottomWidth: 1, borderColor:'#aaa'}}>
         <TouchableOpacity 
-          style = {{flex: 1, flexDirection: 'row', backgroundColor: '#888'}}
-          onPress = {() => this.props.navigation.navigate("Chat",{a: item.title, url: item.video_link})} >
+          style = {{flex: 1, flexDirection: 'row'}}
+          onPress = {() => this.props.navigation.navigate("Chat",{url: item.video_link})} >
           <Image source = {{uri: item.image}}
             style = {{flex: 1, height: 110}} // 差不多了
             resizeMode = "cover"
             />
-          <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>第 {item.number} 集</Text>
-            <Text>第 {item.number} 集</Text>
-            <Text>{item.title}</Text>
-            <Text>{item.translator}</Text>
+          <View style={{flex:1}}>
+            <View style={{flex:1, marginLeft: 10, justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
+              <Text style={styles.serieText}>{item.serie_title}</Text>
+              <Text style={styles.serieText}>第 {item.number} 集</Text>
+            </View>
+            <View style={{flex:1, justifyContent: 'center', alignSelf: 'center'}}>
+              <Text style={styles.bodyText}>{item.title}</Text>
+            </View>
+            <View style={{flex:1, marginRight: 10, justifyContent: 'center', alignSelf: 'flex-end'}}>
+              <Text style={styles.translatorText}>{item.translator}</Text>
+            </View>      
           </View>
         </TouchableOpacity>
       </View>
@@ -157,6 +159,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch', // 全宽
   },
+  serieText: {
+    fontSize: 12,
+  },
+  bodyText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  translatorText: {
+    fontSize: 11,
+    color: '#888',
+  }
 });
 
 AppRegistry.registerComponent('haha', () => SimpleApp);
