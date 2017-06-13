@@ -45,9 +45,9 @@ class NoteScreen extends React.Component {
 
 // 这个是详情页：只有一个 WebView
 class ChatScreen extends React.Component {
-  static navigationOptions = {
-    title: '要换这个标题',
-  };
+  static navigationOptions = ({ navigation }) => ({
+    title: `${navigation.state.params.title}`,
+  });
   render() {
     const { params } = this.props.navigation.state;
     return (
@@ -81,7 +81,8 @@ class HomeScreen extends React.Component {
   }
 
   makeRemoteRequest = () => {
-    const url = 'https://algori.tech/api/newest';    
+    const url = 'https://algori.tech/api/newest';
+    // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理    
     fetch(url)
       .then(res => res.json())
       .then(res => {
@@ -93,17 +94,21 @@ class HomeScreen extends React.Component {
         });
       })
       .catch(error => {
-        console.log('Networking fail');
+        console.log('Networking fail or result is empty'); 
       });
   };
 
   _renderItem(item) {
-    //console.log(item);
+    // 如果标题太长, 就切断变成 ...
+    var length = 14;
+    const trimmedString = item.title.length > length ? 
+                    item.title.substring(0, length - 3) + "..." : 
+                    item.title;
     return (
       <View style = {{flex: 1, flexDirection: 'row', backgroundColor: '#fff', borderBottomWidth: 1, borderColor:'#aaa'}}>
         <TouchableOpacity 
           style = {{flex: 1, flexDirection: 'row'}}
-          onPress = {() => this.props.navigation.navigate("Chat",{url: item.video_link})} >
+          onPress = {() => this.props.navigation.navigate("Chat",{url: item.video_link, title: item.title})} >
           <Image source = {{uri: item.image}}
             style = {{flex: 1, height: 110}} // 差不多了
             resizeMode = "cover"
@@ -114,7 +119,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.serieText}>第 {item.number} 集</Text>
             </View>
             <View style={{flex:1, justifyContent: 'center', alignSelf: 'center'}}>
-              <Text style={styles.bodyText}>{item.title}</Text>
+              <Text style={styles.bodyText}>{trimmedString}</Text>
             </View>
             <View style={{flex:1, marginRight: 10, justifyContent: 'center', alignSelf: 'flex-end'}}>
               <Text style={styles.translatorText}>{item.translator}</Text>
