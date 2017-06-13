@@ -114,16 +114,13 @@ class HomeScreen extends React.Component {
             resizeMode = "cover"
             />
           <View style={{flex:1}}>
-            <View style={{flex:1, marginLeft: 10, justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
+            <View style={{flex:1, marginLeft: 10, marginRight: 10, justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
               <Text style={styles.serieText}>{item.serie_title}</Text>
-              <Text style={styles.serieText}>第 {item.number} 集</Text>
+              <Text style={styles.serieNumber}>第 {item.number} 集</Text>
             </View>
-            <View style={{flex:1, justifyContent: 'center', alignSelf: 'center'}}>
-              <Text style={styles.bodyText}>{trimmedString}</Text>
-            </View>
-            <View style={{flex:1, marginRight: 10, justifyContent: 'center', alignSelf: 'flex-end'}}>
-              <Text style={styles.translatorText}>{item.translator}</Text>
-            </View>      
+            <View style={{flex:1, marginLeft: 8, marginRight: 8, justifyContent: 'flex-start', alignSelf: 'center'}}>
+              <Text style={styles.bodyText}>{item.title}</Text>
+            </View>   
           </View>
         </TouchableOpacity>
       </View>
@@ -142,6 +139,7 @@ class HomeScreen extends React.Component {
       <View style={styles.container}>
         <FlatList
           data = { this.state.data }
+          keyExtractor = {(item, index) => item.id}
           style = {{backgroundColor: '#000'}}
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
@@ -165,6 +163,9 @@ const styles = StyleSheet.create({
     alignItems: 'stretch', // 全宽
   },
   serieText: {
+    fontSize: 12,
+  },
+  serieNumber: {
     fontSize: 12,
   },
   bodyText: {
