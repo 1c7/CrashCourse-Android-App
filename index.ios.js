@@ -65,7 +65,9 @@ class HomeScreen extends React.Component {
     super(props);
     this.state = {
       isLoading: true,
-      data: [],
+      data: [], // 列表的数据
+      page: 1,
+      refreshing: false
     };
   }
   static navigationOptions = ({ navigation }) => {
@@ -80,22 +82,33 @@ class HomeScreen extends React.Component {
     this.makeRemoteRequest();
   }
 
+  // 发请求
   makeRemoteRequest = () => {
-    const url = 'https://algori.tech/api/newest';
-    // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理    
+    const {page} = this.state;
+    const url = `https://algori.tech/api/newest?page=${page}`;
+    this.setState({ refreshing: true });
+    // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
+
+    setTimeout(() => {
+
     fetch(url)
       .then(res => res.json())
       .then(res => {
         console.log("res is success get here");
         console.log(res);
         this.setState({
-          data: res,
-          isLoading: false
+          data: page === 1 ? res : [...this.state.data, ...res],
+          isLoading: false,
+          refreshing: false,
         });
       })
       .catch(error => {
+        this.setState({isLoading: false, refreshing: true });
         console.log('Networking fail or result is empty'); 
       });
+
+    }, 1000)  
+
   };
 
   _renderItem(item) {
@@ -140,12 +153,22 @@ class HomeScreen extends React.Component {
         <FlatList
           data = { this.state.data }
           keyExtractor = {(item, index) => item.id}
-          style = {{backgroundColor: '#000'}}
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
+          onEndReached = {this.handleLoadMore}
+          onEndReachedThreshold = {30}
+          refreshing = {this.state.refreshing}
         />
       </View>
     )
+  }
+  // 载入下一页
+  handleLoadMore = () => {
+    this.setState({
+      page: this.state.page + 1
+    }, () => {
+      this.makeRemoteRequest();
+    })
   }
 }
 
