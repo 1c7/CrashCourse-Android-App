@@ -7,10 +7,10 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import NoteScreen from './NoteScreen';
-import TestScreen from './TestScreen';
-import VideoScreen from './VideoScreen';
-import HomeScreen from './HomeScreen';
+import NoteScreen from './src/NoteScreen';
+import TestScreen from './src/TestScreen';
+import VideoScreen from './src/VideoScreen';
+import HomeScreen from './src/HomeScreen';
 
 const SimpleApp = StackNavigator({
   Home: { screen: HomeScreen }, // 首页
