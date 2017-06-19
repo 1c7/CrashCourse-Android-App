@@ -7,8 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "install": "^0.10.1",
+    "npm": "^5.0.3",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.3",
+    "react-native-grid-component": "^1.0.6",
     "react-navigation": "^1.0.0-beta.11"
   },
   "devDependencies": {

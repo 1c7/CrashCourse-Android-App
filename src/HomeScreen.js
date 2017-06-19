@@ -27,6 +27,7 @@ export default class HomeScreen extends React.Component {
     const {state, setParams} = navigation;
     return {
       headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
+      headerLeft: <Button title="分类" onPress={() => {navigation.navigate('Category')} }/>,
       title: '最新'
     };
   };
@@ -41,14 +42,11 @@ export default class HomeScreen extends React.Component {
     const url = `https://algori.tech/api/newest?page=${page}`;
     this.setState({ refreshing: true });
     // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
-
-    setTimeout(() => {
-
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log("res is success get here");
-        console.log(res);
+        // console.log("res is success get here");
+        // console.log(res);
         this.setState({
           data: page === 1 ? res : [...this.state.data, ...res],
           isLoading: false,
@@ -59,9 +57,6 @@ export default class HomeScreen extends React.Component {
         this.setState({isLoading: false, refreshing: true });
         console.log('Networking fail or result is empty'); 
       });
-
-    }, 1000)  
-
   };
 
   _renderItem(item) {
