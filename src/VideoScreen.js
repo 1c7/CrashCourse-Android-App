@@ -22,6 +22,7 @@ export default class VideoScreen extends React.Component {
       <WebView
         source={{uri: params.url}}
         style={{flex: 1, backgroundColor: "#f99"}}
+        allowsInlineMediaPlayback={true}
       />
     );
   }

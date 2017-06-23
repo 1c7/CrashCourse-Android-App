@@ -10,7 +10,8 @@ import {
   Button,
   TouchableOpacity,
   ActivityIndicator,
-  Image
+  Image,
+  Linking
 } from 'react-native';
 
 export default class HomeScreen extends React.Component {
@@ -69,7 +70,7 @@ export default class HomeScreen extends React.Component {
       <View style = {{flex: 1, flexDirection: 'row', backgroundColor: '#fff', borderBottomWidth: 1, borderColor:'#aaa'}}>
         <TouchableOpacity 
           style = {{flex: 1, flexDirection: 'row'}}
-          onPress = {() => this.props.navigation.navigate("Chat",{url: item.video_link, title: item.title})} >
+          onPress = {() => Linking.openURL(item.video_link)}>
           <Image source = {{uri: item.image}}
             style = {{flex: 1, height: 110}} // 差不多了
             resizeMode = "cover"
