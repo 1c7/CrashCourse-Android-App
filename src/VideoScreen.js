@@ -1,4 +1,4 @@
-// 这个是详情页：只有一个 WebView
+// 暂时没用到，只是一个 Webview 而已
 import React, { Component } from 'react';
 import {
   AppRegistry,

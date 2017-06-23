@@ -20,7 +20,8 @@ export default class CategoryListScreen extends React.Component {
       isLoading: true,
       data: [], // 列表的数据
       page: 1,
-      refreshing: false
+      refreshing: false,
+      isEmpty: false
     };
   }
   static navigationOptions = ({ navigation }) => {
@@ -38,13 +39,10 @@ export default class CategoryListScreen extends React.Component {
   makeRemoteRequest = () => {
     const { params } = this.props.navigation.state;
     const url = `https://algori.tech/api/serie/${params.serie_id}`;
-    console.log(url);
     this.setState({ refreshing: true });
-    // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         this.setState({
           data: res,
           isLoading: false,
@@ -53,7 +51,7 @@ export default class CategoryListScreen extends React.Component {
       })
       .catch(error => {
         this.setState({isLoading: false, refreshing: true });
-        console.log('CateList Networking fail or result is empty'); 
+        console.log('CategoryList catch error'); 
       });
   };
 
@@ -89,6 +87,13 @@ export default class CategoryListScreen extends React.Component {
       return (
         <View style={{flex: 1, paddingTop: 20}}>
           <ActivityIndicator />
+        </View>
+      );
+    }
+    if (this.state.data.length == 0) {
+      return (
+        <View style={{flex: 1, paddingTop: 20, alignItems: 'center'}}>
+          <Text style={{fontWeight:'bold', fontSize: 22}}>一集也没有, 摊手</Text>
         </View>
       );
     }

@@ -7,11 +7,11 @@ import {
 } from 'react-native';
 import { StackNavigator, TabNavigator } from 'react-navigation';
 
-import NoteScreen from './src/NoteScreen';
-import TestScreen from './src/TestScreen';
-import VideoScreen from './src/VideoScreen';
-import HomeScreen from './src/HomeScreen';
-import CategoryScreen from './src/CategoryScreen';
+import HomeScreen from './src/HomeScreen'; // 首页
+import CategoryScreen from './src/CategoryScreen'; // 系列
+import CategoryListScreen from './src/CategoryListScreen'; // 系列列表
+import NoteScreen from './src/NoteScreen'; // 说明
+import TestScreen from './src/TestScreen'; // 测试
 
 const SimpleApp = TabNavigator({
   Home: { screen: HomeScreen }, // 最新
