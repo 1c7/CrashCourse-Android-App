@@ -25,6 +25,11 @@ export default class CategoryScreen extends Component {
       refreshing: false
     };
   }
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: '系列'
+    };
+  };
   componentDidMount() {
     this.makeRemoteRequest();
   }
