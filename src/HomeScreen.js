@@ -75,11 +75,11 @@ export default class HomeScreen extends React.Component {
             resizeMode = "cover"
             />
           <View style={{flex:1}}>
-            <View style={{flex:1, marginLeft: 10, marginRight: 10, justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
+            <View style={{flex:1, marginLeft: 10, marginRight: 10, paddingTop: 10, justifyContent: 'flex-start', alignItems: 'flex-start', flexDirection: 'row'}}>
               <Text style={styles.serieText}>{item.serie_title}</Text>
               <Text style={styles.serieNumber}>第 {item.number} 集</Text>
             </View>
-            <View style={{flex:1, marginLeft: 8, marginRight: 8, justifyContent: 'flex-start', alignSelf: 'center'}}>
+            <View style={{flex:2, marginLeft: 8, marginRight: 8, justifyContent: 'flex-start', alignSelf: 'center'}}>
               <Text style={styles.bodyText}>{item.title}</Text>
             </View>   
           </View>

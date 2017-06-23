@@ -15,10 +15,10 @@ import VideoTestScreen from './src/VideoTestScreen'; // 也是测试
 // https://algori.tech/api/series
 
 const SimpleApp = StackNavigator({
-  Category: { screen: CategoryScreen },
   Home: { screen: HomeScreen },
   Note: { screen: NoteScreen },
   Test: { screen: TestScreen },
+  Category: { screen: CategoryScreen },
   CategoryList: { screen: CategoryListScreen },
 });
 
