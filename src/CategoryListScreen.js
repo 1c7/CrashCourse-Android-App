@@ -13,7 +13,7 @@ import {
   Linking
 } from 'react-native';
 
-export default class HomeScreen extends React.Component {
+export default class CategoryListScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,9 +26,7 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     const {state, setParams} = navigation;
     return {
-      headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
-      headerLeft: <Button title="分类" onPress={() => {navigation.navigate('Category')} }/>,
-      title: '最新'
+      title: `${navigation.state.params.serie_title}`,
     };
   };
 
@@ -38,24 +36,24 @@ export default class HomeScreen extends React.Component {
 
   // 发请求
   makeRemoteRequest = () => {
-    const {page} = this.state;
-    const url = `https://algori.tech/api/newest?page=${page}`;
+    const { params } = this.props.navigation.state;
+    const url = `https://algori.tech/api/serie/${params.serie_id}`;
+    console.log(url);
     this.setState({ refreshing: true });
     // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        // console.log("res is success get here");
-        // console.log(res);
+        console.log(res);
         this.setState({
-          data: page === 1 ? res : [...this.state.data, ...res],
+          data: res,
           isLoading: false,
           refreshing: false,
         });
       })
       .catch(error => {
         this.setState({isLoading: false, refreshing: true });
-        console.log('Networking fail or result is empty'); 
+        console.log('CateList Networking fail or result is empty'); 
       });
   };
 
@@ -75,11 +73,10 @@ export default class HomeScreen extends React.Component {
             resizeMode = "cover"
             />
           <View style={{flex:1}}>
-            <View style={{flex:1, marginLeft: 10, marginRight: 10, justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'row'}}>
-              <Text style={styles.serieText}>{item.serie_title}</Text>
+            <View style={{flex:1, marginLeft: 10, marginRight: 10, paddingTop: 10, justifyContent: 'flex-start', alignItems: 'flex-start', flexDirection: 'row'}}>
               <Text style={styles.serieNumber}>第 {item.number} 集</Text>
             </View>
-            <View style={{flex:1, marginLeft: 8, marginRight: 8, justifyContent: 'flex-start', alignSelf: 'center'}}>
+            <View style={{flex:2, marginLeft: 8, marginRight: 8, justifyContent: 'flex-start', alignSelf: 'center'}}>
               <Text style={styles.bodyText}>{item.title}</Text>
             </View>   
           </View>
@@ -88,7 +85,6 @@ export default class HomeScreen extends React.Component {
     )
   }
   render() {
-    // 如果在载入就显示一个加载图标
     if (this.state.isLoading) {
       return (
         <View style={{flex: 1, paddingTop: 20}}>
@@ -100,7 +96,7 @@ export default class HomeScreen extends React.Component {
     return ( 
       <View style={styles.container}>
         <FlatList
-          data = { this.state.data }
+          data = {this.state.data}
           keyExtractor = {(item, index) => item.id}
           navigation = { navigate }
           renderItem = { ({item}) => this._renderItem(item) }
