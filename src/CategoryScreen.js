@@ -7,7 +7,8 @@ import {
   Button,
   TouchableOpacity,
   ActivityIndicator,
-  Image
+  Image,
+  Platform
 } from 'react-native';
 
 // 这个 Grid 来自 https://github.com/phil-r/react-native-grid-component
@@ -24,9 +25,16 @@ export default class CategoryScreen extends Component {
     };
   }
   static navigationOptions = ({ navigation }) => {
-    return {
-      title: '系列'
-    };
+    if (Platform.OS === 'ios'){
+      return {
+        title: '系列',
+      };
+    } else {
+      return {
+        title: '系列',
+        header: null,
+      };
+    }
   };
   componentDidMount() {
     this.makeRemoteRequest();
@@ -38,7 +46,6 @@ export default class CategoryScreen extends Component {
     fetch(url)
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         this.setState({
           data: res,
           isLoading: false,

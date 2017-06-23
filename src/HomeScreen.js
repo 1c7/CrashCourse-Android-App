@@ -10,7 +10,8 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Image,
-  Linking
+  Linking,
+  Platform
 } from 'react-native';
 
 export default class HomeScreen extends React.Component {
@@ -25,11 +26,21 @@ export default class HomeScreen extends React.Component {
   }
   static navigationOptions = ({ navigation }) => {
     const {state, setParams} = navigation;
-    return {
-      headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
-      headerLeft: <Button title="分类" onPress={() => {navigation.navigate('Category')} }/>,
-      title: '最新'
-    };
+    if (Platform.OS === 'ios'){
+      return {
+        headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
+        headerLeft: <Button title="分类" onPress={() => {navigation.navigate('Category')} }/>,
+        title: '最新',
+      };
+    } else {
+      return {
+        headerRight: <Button title="说明" onPress={() => {navigation.navigate("Note")} }/>,
+        headerLeft: <Button title="分类" onPress={() => {navigation.navigate('Category')} }/>,
+        title: '最新',
+        header: null,
+      };
+    }
+
   };
 
   componentDidMount() {
