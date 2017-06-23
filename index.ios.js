@@ -13,8 +13,8 @@ import TestScreen from './src/TestScreen'; // 测试
 const SimpleApp = StackNavigator({
   Home: { screen: HomeScreen },
   Category: { screen: CategoryScreen },
-  CategoryList: { screen: CategoryListScreen },
   Note: { screen: NoteScreen },
+  CategoryList: { screen: CategoryListScreen },
   Test: { screen: TestScreen },
 });
 
