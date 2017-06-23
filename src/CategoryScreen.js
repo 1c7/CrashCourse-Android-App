@@ -1,3 +1,4 @@
+// 系列
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -9,6 +10,7 @@ import {
   Image
 } from 'react-native';
 
+// 这个 Grid 来自 https://github.com/phil-r/react-native-grid-component
 import Grid from 'react-native-grid-component';
 
 export default class CategoryScreen extends Component {
@@ -16,7 +18,7 @@ export default class CategoryScreen extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      data: [], // 列表的数据
+      data: [], // 列表数据
       page: 1,
       refreshing: false
     };
@@ -33,7 +35,6 @@ export default class CategoryScreen extends Component {
   makeRemoteRequest = () => {
     const url = `https://algori.tech/api/series`;
     this.setState({ refreshing: true });
-    // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
     fetch(url)
       .then(res => res.json())
       .then(res => {
@@ -51,7 +52,8 @@ export default class CategoryScreen extends Component {
   };
 
   _renderItem = (data, i) => 
-      <TouchableOpacity key={i} style={{flex: 1, flexDirection: 'row'}} onPress = {() => this.props.navigation.navigate('CategoryList', {serie_id: data.id, serie_title:data.title})}>
+      <TouchableOpacity key={i} style={{flex: 1, flexDirection: 'row'}} 
+          onPress = {() => this.props.navigation.navigate('CategoryList', {serie_id: data.id, serie_title:data.title})}>
         <View style={styles.container} >
         <Image style={styles.image} source={{uri:data.image}}>
           <View style={styles.overlay}/>

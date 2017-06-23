@@ -1,4 +1,5 @@
 // 暂时没用到，只是一个 Webview 而已
+// 先留着, 可能以后有用
 import React, { Component } from 'react';
 import {
   AppRegistry,

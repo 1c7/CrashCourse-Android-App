@@ -10,14 +10,12 @@ import CategoryListScreen from './src/CategoryListScreen'; // 系列列表
 import NoteScreen from './src/NoteScreen'; // 说明
 import TestScreen from './src/TestScreen'; // 测试
 
-// https://algori.tech/api/series
-
 const SimpleApp = StackNavigator({
-  Category: { screen: CategoryScreen },
   Home: { screen: HomeScreen },
+  Category: { screen: CategoryScreen },
+  CategoryList: { screen: CategoryListScreen },
   Note: { screen: NoteScreen },
   Test: { screen: TestScreen },
-  CategoryList: { screen: CategoryListScreen },
 });
 
 AppRegistry.registerComponent('haha', () => SimpleApp);

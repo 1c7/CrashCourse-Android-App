@@ -1,4 +1,4 @@
-// 只显示 test 文字
+// 测试页
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 export default class TestScreen extends React.Component {

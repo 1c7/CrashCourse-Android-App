@@ -1,4 +1,6 @@
-// 主页
+// 点击系列后显示的列表，比如全是计算机科学的
+// 这个完全复制自 HomeScreen.js 修改
+// 比如完全没分页
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -34,7 +36,6 @@ export default class CategoryListScreen extends React.Component {
   componentDidMount() {
     this.makeRemoteRequest();
   }
-
   // 发请求
   makeRemoteRequest = () => {
     const { params } = this.props.navigation.state;
