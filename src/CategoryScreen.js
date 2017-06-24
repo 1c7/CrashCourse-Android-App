@@ -66,6 +66,7 @@ export default class CategoryScreen extends Component {
           <View style={styles.overlay}/>
           <View style={styles.overlayTextView}>
               <Text style={styles.text}>{data.title}</Text>
+              <Text style={styles.en_text}>{data.english_name}</Text>
           </View>
         </Image>
       </View>
@@ -105,7 +106,11 @@ const styles = StyleSheet.create({
   },
   text:{
     fontWeight: "bold",
-    fontSize: 16,
+    fontSize: 18,
+    color: 'white',
+  },
+  en_text:{
+    fontSize: 14,
     color: 'white',
   },
   overlayTextView:{
@@ -120,6 +125,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     backgroundColor: 'black',
-    opacity: 0.3
+    opacity: 0.7
   }
 });
