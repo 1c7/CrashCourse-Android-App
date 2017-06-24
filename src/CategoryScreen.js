@@ -68,6 +68,7 @@ export default class CategoryScreen extends Component {
               <Text style={styles.text}>{data.title}</Text>
               <Text style={styles.en_text}>{data.english_name}</Text>
           </View>
+          <Text style={styles.subtitle_text}>{data.subtitle}</Text>
         </Image>
       </View>
       </TouchableOpacity>
@@ -113,10 +114,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'white',
   },
+  subtitle_text:{
+    fontSize: 12,
+    color: 'white',
+    paddingBottom: 10,
+  },
   overlayTextView:{
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: 20,
   },
   overlay: {
     position: 'absolute',
