@@ -12,7 +12,6 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.3",
     "react-native-grid-component": "^1.0.6",
-    "react-native-video": "^1.0.0",
     "react-navigation": "^1.0.0-beta.11"
   },
   "devDependencies": {
