@@ -1,4 +1,4 @@
-package com.haha;
+package com.crashcourse.china.c17;
 
 import com.facebook.react.ReactActivity;
 
