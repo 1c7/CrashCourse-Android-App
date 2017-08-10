@@ -10,6 +10,7 @@ import {
   Image,
   Platform
 } from 'react-native';
+import Api_list from './Api';
 
 // 这个 Grid 来自 https://github.com/phil-r/react-native-grid-component
 import Grid from 'react-native-grid-component';
@@ -41,7 +42,7 @@ export default class CategoryScreen extends Component {
   }
   // 发请求
   makeRemoteRequest = () => {
-    const url = `https://algori.tech/api/series`;
+    const url = Api_list.serie_url;
     this.setState({ refreshing: true });
     fetch(url)
       .then(res => res.json())

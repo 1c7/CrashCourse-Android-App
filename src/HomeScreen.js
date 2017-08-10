@@ -13,6 +13,7 @@ import {
   Linking,
   Platform
 } from 'react-native';
+import Api_list from './Api';
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
@@ -50,7 +51,7 @@ export default class HomeScreen extends React.Component {
   // 发请求
   makeRemoteRequest = () => {
     const {page} = this.state;
-    const url = `https://algori.tech/api/newest?page=${page}`;
+    const url = `${Api_list.newest_url}?page=${page}`;
     this.setState({ refreshing: true });
     // 没有做空检测，先不管了，如果请求是 200 正常，但是完全是空的，这种没处理  
     fetch(url)

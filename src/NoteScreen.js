@@ -1,6 +1,7 @@
 // 说明页：只有一个 WebView
 import React, { Component } from 'react';
 import { WebView, Platform, Linking} from 'react-native';
+import Api_list from './Api';
 
 export default class NoteScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
@@ -18,7 +19,7 @@ export default class NoteScreen extends React.Component {
   
   // https://gist.github.com/tylerbuchea/9e50dcec14362349c392
   openExternalLink(req) {
-    const url = 'https://algori.tech/about_cc';
+    const url = Api_list.note_url;
     const isLocal = req.url.search(url) !== -1;
     if (isLocal) {
       return true;
@@ -29,7 +30,7 @@ export default class NoteScreen extends React.Component {
   }
 
   render() {
-    const url = 'https://algori.tech/about_cc';
+    const url = Api_list.note_url;
     return (
       <WebView
         source={{uri: url}}

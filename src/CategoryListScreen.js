@@ -14,6 +14,7 @@ import {
   Image,
   Linking
 } from 'react-native';
+import Api_list from './Api';
 
 export default class CategoryListScreen extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ export default class CategoryListScreen extends React.Component {
   // 发请求
   makeRemoteRequest = () => {
     const { params } = this.props.navigation.state;
-    const url = `https://algori.tech/api/serie/${params.serie_id}`;
+    const url = `${Api_list.single_serie_url}${params.serie_id}`;
     this.setState({ refreshing: true });
     fetch(url)
       .then(res => res.json())
