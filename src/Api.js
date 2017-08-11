@@ -1,6 +1,4 @@
-// All Api url is here 
-// API 地址全都放这里
-// 这样就不用到处改了。
+// API 地址全放这里
 
 var root_url = 'http://crashcourse.myherego.com';
 

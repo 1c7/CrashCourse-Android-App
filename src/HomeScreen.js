@@ -1,4 +1,4 @@
-// 主页
+// 最新
 import React, { Component } from 'react';
 import {
   StyleSheet,

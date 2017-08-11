@@ -12,7 +12,7 @@ import TestScreen from './src/TestScreen'; // 测试
 
 const Tab = TabNavigator({
   Home: { screen: HomeScreen }, // 最新
-  Category: { screen: CategoryScreen }, // 分类
+  Category: { screen: CategoryScreen }, // 系列
   Note: { screen: NoteScreen }, // 说明
 });
 

@@ -1,4 +1,4 @@
-// 系列
+// "系列" - 那些方块
 import React, { Component } from 'react';
 import {
   StyleSheet,

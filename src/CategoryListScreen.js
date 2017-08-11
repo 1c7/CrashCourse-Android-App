@@ -1,6 +1,6 @@
-// 点击系列后显示的列表，比如全是计算机科学的
-// 这个完全复制自 HomeScreen.js 修改
-// 比如完全没分页
+// 点击“系列”里任意一个方块显示的列表
+// 完全复制自 HomeScreen.js 做了些
+// 没做分页
 import React, { Component } from 'react';
 import {
   StyleSheet,
