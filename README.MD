@@ -57,15 +57,16 @@ Crash Course 字幕组出品.
 9. 没了，就这么些代码，看一遍预计花费 < 30 分钟。有用的代码就 6 个文件。
 
 * [index.android.js](./index.android.js)
-* [src/HomeScreen.js](./src/HomeScreen.js) 
+* [src/HomeScreen](./src/HomeScreen.js) 
 * [src/CategoryScreen](./src/CategoryScreen.js)
-* [src/CategoryListScreen.js](./src/CategoryListScreen.js)
-* [src/NoteScreen.js](./src/NoteScreen.js)
-* [src/Api.js](./src/Api.js)
+* [src/CategoryListScreen](./src/CategoryListScreen.js)
+* [src/NoteScreen](./src/NoteScreen.js)
+* [src/Api](./src/Api.js)
 
 
 
 ### Android 跑起来
+记得先在 Android Studio 里打开一个模拟器先。  
 ```
 react-native run-android
 ```
