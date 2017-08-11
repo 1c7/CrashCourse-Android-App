@@ -6,7 +6,16 @@
 **只上线了安卓应用市场“酷安”**     
 豌豆荚，小米，百度，比较烦就没上。       
 腾讯应用宝拒了，所以也没上。      
-iOS 因为不想交 699 一年的会员，也没上。     
+iOS 因为不想交 699 一年的会员，也没上。    
+
+
+### App 是做什么的？
+聚合了所有有字幕的 Crash Course 视频。       
+建议安装 B 站的 App 然后作为打开方式。         
+Crash Course 字幕组出品.         
+字幕组 Q 群：305631757    
+[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+
 
 ### App 长这样（真机截图）
 <img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">
@@ -14,7 +23,8 @@ iOS 因为不想交 699 一年的会员，也没上。
 
 #### 技术栈
 * React Native 0.46  
-* 后端 Ruby on Rails   
+* 后端 Ruby on Rails (API)   
+* 服务器在 UCloud 广东区   
 
 顺带一说，我的开发和测试都是在 Mac 上做的。（2014 年 15寸 Macbook Pro）   
 所以如果你在 Win 上跑这个项目，也许会有一些问题/错误。        
