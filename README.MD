@@ -1,4 +1,4 @@
-## CC 速成班 | Android :white_check_mark: iOS :x: | 开源 React Native 项目 (RN 版本 0.46)
+## CC 速成班 - Android :white_check_mark: iOS :x: - 开源 React Native 项目 (RN 版本 0.46)
 <img src="/unrelated-stuff/cc-logo.png" width="10%">       
 <img src="/unrelated-stuff/ss.png" width="45%">    
 
