@@ -4,6 +4,7 @@
 [CC 速成班 App 下载地址](https://www.coolapk.com/apk/147390)    
 
 **只上线了安卓应用市场“酷安”**     
+<img src="/unrelated-stuff/1.png" width="50%">   
 豌豆荚，小米，百度，比较烦就没上。       
 腾讯应用宝拒了，所以也没上。      
 iOS 因为不想交 699 一年的会员，也没上。    
