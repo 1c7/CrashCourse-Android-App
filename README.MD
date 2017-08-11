@@ -33,6 +33,25 @@ Crash Course 字幕组出品.
 所以如果在 Win 上跑，也许会有一些问题/错误。        
 
 
+### 为什么开源？
+给其他人提供一个参考吧。也不是说代码写得多好，只是放出来给大家看看。   
+然后如果有兴趣加入字幕组，或者是有想法有点子想改进这个 App，欢迎来聊聊。   
+
+### 怎么学习（看代码）？
+因为目前只有安卓版的，iOS 的我没太在意，
+所以 
+1. 看一眼 index.android.js
+2. 代码都在 src 里，放到一个文件夹就不会乱七八糟
+3. src/Api.js 放的都是 API 地址，统一放一起好管理
+4. 刚进去的时候，首页那个最新 tab， 是 src/HomeScreen.js
+5. "系列" 是 src/CategoryScreen.js
+6. "系列"点击任意一个是 src/CategoryListScreen.js
+7. "说明"页面是 NoteScreen.js
+8. TestScreen/VideoScreen 没用上，先放着。
+9. 没了，就这么些代码，预计花费你低于 30 分钟时间。一共 6 个文件(index.android.js + HomeScreen + CategoryScreen + CategoryListScreen + NoteScreen + Api)
+
+
+
 ### Android 跑起来
 ```
 react-native run-android
