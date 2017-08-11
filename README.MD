@@ -9,9 +9,7 @@
 iOS 因为不想交 699 一年的会员，也没上。     
 
 ### App 长这样（真机截图）
-<img src="/unrelated-stuff/1.png" width="120px">
-<img src="/unrelated-stuff/2.png" width="120px">
-<img src="/unrelated-stuff/3.png" width="120px">
+<img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">
 
 
 #### 技术栈
