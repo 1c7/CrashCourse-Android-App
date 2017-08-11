@@ -16,27 +16,23 @@ export default class NoteScreen extends React.Component {
       };
     }
   };
-  
-  // https://gist.github.com/tylerbuchea/9e50dcec14362349c392
-  openExternalLink(req) {
-    const url = Api_list.note_url;
-    const isLocal = req.url.search(url) !== -1;
-    if (isLocal) {
-      return true;
-    } else {
-      Linking.openURL(req.url);
-      return false;
-    }
-  }
 
   render() {
     const url = Api_list.note_url;
     return (
       <WebView
+        ref={(ref) => { this.webview = ref; }}
         source={{uri: url}}
         style={{flex: 1, backgroundColor: "#f99"}}
-        onShouldStartLoadWithRequest={this.openExternalLink}
+        onNavigationStateChange={(event) => {
+          if (event.url != url) {
+            console.log('stop loading!');
+            this.webview.stopLoading();
+            Linking.openURL(event.url);
+          }
+        }}
       />
     );
   }
+
 }
