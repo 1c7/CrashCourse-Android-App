@@ -24,6 +24,11 @@ Crash Course 字幕组出品.
 <img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">
 
 
+### 统计数据
+下载量：~600（6 月 26 号上线酷安。到今天 8 月 11 号）          
+收到捐助总额：165 元（支付宝收到 43 元，微信收到 122 元）            
+（收到的金额会积累起来，等足够了就给译者买一些礼品，更具体的说明都写在 App 里了，这里就不赘述了）  
+
 #### 技术栈
 * React Native 0.46  
 * 后端 Ruby on Rails (API)   
@@ -49,7 +54,7 @@ Crash Course 字幕组出品.
 6. "系列"点击任意一个是 src/CategoryListScreen.js
 7. "说明"页面是 NoteScreen.js
 8. TestScreen/VideoScreen 没用上，先放着。
-9. 没了，就这么些代码，预计花费你低于 30 分钟时间。一共 6 个文件。 
+9. 没了，就这么些代码，预计花费你低于 30 分钟时间。有用的代码一共就 6 个文件。
 
 * [index.android.js](./index.android.js)
 * HomeScreen 
