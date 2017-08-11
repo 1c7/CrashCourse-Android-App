@@ -45,6 +45,7 @@ Crash Course 字幕组出品.
 给其他人提供一个参考。不是说代码写得多好，只是放出来给大家看看。   
 如果有兴趣加入字幕组，或是有想法改进这个 App，欢迎聊聊。   
 
+<!--
 ### 怎么学？（看代码）
 因为目前只有 Android 的，
 所以 
@@ -64,7 +65,7 @@ Crash Course 字幕组出品.
 * [src/CategoryListScreen](./src/CategoryListScreen.js)
 * [src/NoteScreen](./src/NoteScreen.js)
 * [src/Api](./src/Api.js)
-
+-->
 
 
 ### Android 跑起来

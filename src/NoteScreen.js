@@ -1,6 +1,6 @@
 // 说明页：只有一个 WebView
 import React, { Component } from 'react';
-import { WebView, Platform, Linking} from 'react-native';
+import { WebView, Platform, Linking } from 'react-native';
 import Api_list from './Api';
 
 export default class NoteScreen extends React.Component {
