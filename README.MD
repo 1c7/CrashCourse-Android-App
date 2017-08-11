@@ -54,16 +54,14 @@ Crash Course 字幕组出品.
 6. "系列"点击任意一个是 src/CategoryListScreen.js
 7. "说明"页面是 NoteScreen.js
 8. TestScreen/VideoScreen 没用上，先放着。
-9. 没了，就这么些代码，预计花费你低于 30 分钟时间。有用的代码一共就 6 个文件。
+9. 没了，就这么些代码，看一遍预计花费 < 30 分钟。有用的代码就 6 个文件。
 
 * [index.android.js](./index.android.js)
-* HomeScreen 
-* CategoryScreen 
-* CategoryListScreen +
-* NoteScreen ]
-* Api
-
-
+* [src/HomeScreen.js](./src/HomeScreen.js) 
+* [src/CategoryScreen](./src/CategoryScreen.js)
+* [src/CategoryListScreen.js](./src/CategoryListScreen.js)
+* [src/NoteScreen.js](./src/NoteScreen.js)
+* [src/Api.js](./src/Api.js)
 
 
 
@@ -72,7 +70,7 @@ Crash Course 字幕组出品.
 react-native run-android
 ```
 
-### Android 打包
+#### Android 打包
 https://facebook.github.io/react-native/docs/signed-apk-android.html     
 第一次打包和之后再打包不太一样（可以省略一些配置，因为第一次已经配置了），
 现在打包是这样的：      
@@ -82,7 +80,7 @@ https://facebook.github.io/react-native/docs/signed-apk-android.html
 3. 跑 cd android && ./gradlew assembleRelease
 4. 生成出来的文件在： android/app/build/outputs/apk/app-release.apk 
 
-### Android 写新的版本数
+#### Android 写新的版本数
 https://stackoverflow.com/questions/35924721/how-to-update-version-number-of-react-native-app
 
 You should be changing your versionCode and versionName in android/app/build.gradle:
