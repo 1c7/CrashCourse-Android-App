@@ -28,16 +28,17 @@ Crash Course 字幕组出品.
 * React Native 0.46  
 * 后端 Ruby on Rails (API)   
 * 服务器在 UCloud 广东区   
+* API 用了一个已备案域名的二级域名  
 
 顺带一说，开发和测试（模拟器）都是在 Mac 上做的（2014 年 15寸 Macbook Pro）  
 所以如果在 Win 上跑，也许会有一些问题/错误。        
 
 
 ### 为什么开源？
-给其他人提供一个参考吧。也不是说代码写得多好，只是放出来给大家看看。   
-然后如果有兴趣加入字幕组，或者是有想法有点子想改进这个 App，欢迎来聊聊。   
+给其他人提供一个参考。不是说代码写得多好，只是放出来给大家看看。   
+如果有兴趣加入字幕组，或是有想法改进这个 App，欢迎聊聊。   
 
-### 怎么学习（看代码）？
+### 怎么学？（看代码）
 因为目前只有 Android 的，
 所以 
 1. 看一眼 index.android.js
@@ -48,8 +49,16 @@ Crash Course 字幕组出品.
 6. "系列"点击任意一个是 src/CategoryListScreen.js
 7. "说明"页面是 NoteScreen.js
 8. TestScreen/VideoScreen 没用上，先放着。
-9. 没了，就这么些代码，预计花费你低于 30 分钟时间。一共 6 个文件。
-(index.android.js + HomeScreen + CategoryScreen + CategoryListScreen + NoteScreen + Api)
+9. 没了，就这么些代码，预计花费你低于 30 分钟时间。一共 6 个文件。 
+
+* [index.android.js](./index.android.js)
+* HomeScreen 
+* CategoryScreen 
+* CategoryListScreen +
+* NoteScreen ]
+* Api
+
+
 
 
 
