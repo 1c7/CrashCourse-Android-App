@@ -1,16 +1,16 @@
-# 开源 React Native App(0.46)
-## CC 速成班
+## CC 速成班（App 已上线） - 开源 React Native App(0.46)
+代码和上线版本一样，没有任何删减
 
-
-
-### App 已上线 - 只上线了安卓应用市场：酷安
-App 在酷安的地址：
+[CC 速成班 App 下载地址](https://www.coolapk.com/apk/147390)
+**只上线了安卓应用市场“酷安”**
 豌豆荚，小米，百度，比较烦，就没上。   
 腾讯应用宝拒了，所以也没上。
 iOS 因为我不想交 699 一年的会员，也没上。
 
-### App 长这样
-图
+### App 长这样（真机截图）
+![1](/unrelated-stuff/1.png)
+![1](/unrelated-stuff/2.png)
+![1](/unrelated-stuff/3.png)
 
 #### 技术栈
 * React Native 0.46  
