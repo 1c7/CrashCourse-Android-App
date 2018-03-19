@@ -1,4 +1,5 @@
 ## 『CC 速成班』
+<img src="/unrelated-stuff/cc-logo.png" width="10%">  
 这个 App 聚合了中文字幕 Crash Course 视频
 
 ### 下载地址
@@ -86,7 +87,7 @@ android {
 
 
 
-<img src="/unrelated-stuff/cc-logo.png" width="10%">       
+       
 <img src="/unrelated-stuff/ss.png" width="45%">    
 
 注：代码和上线版一样，无删减（当然去掉了 keystore，证书当然不开源）   
