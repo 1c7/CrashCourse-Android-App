@@ -10,14 +10,14 @@
 https://www.bilibili.com/video/av13236166/
 
 
-### App 长这样（真机截图）
+### App 截图
 <img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">      
 
 
 ---
 
 
-### 技术栈
+### 技术
 * App：React Native 0.46  
 * 后端：Ruby on Rails 5
 * 服务器：UCloud 广东区
