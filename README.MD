@@ -1,19 +1,18 @@
 ## 『CC 速成班』
 这个 App 聚合了中文字幕 Crash Course 视频
 
-### Logo
-<img src="/unrelated-stuff/cc-logo.png" width="10%">  
-
 ### 下载地址
 * Android：https://www.coolapk.com/apk/147390
 * iOS：无
 
+### 应用截图
+<img src="/unrelated-stuff/ss.png" width="36%">
+
+### App 打开后截图
+<img src="/unrelated-stuff/tab1.png" width="30%"><img src="/unrelated-stuff/tab2.png" width="30%"><img src="/unrelated-stuff/side.png" width="30%">      
+
 ### 视频演示
 https://www.bilibili.com/video/av13236166/
-
-
-### App 截图
-<img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">      
 
 
 ---
@@ -22,19 +21,17 @@ https://www.bilibili.com/video/av13236166/
 ### 技术
 * App：React Native 0.46  
 * 后端：Ruby on Rails 5
-* 服务器：UCloud 广东区
-注：此处代码和上线版一样，无删减（去掉了 keystore，签名证书不开源）
+* 服务器：UCloud 广东区  
+
+注：这里的代码和上架的 App 完全一致，无删减  
+（唯一的例外是去掉了 keystore，签名证书不开源）  
 
 ### 统计数据
 下载量：4900         
-收到捐助总额：165 元（支付宝 43，微信 122）      
-
-### 为什么开源？
-给其他人提供一个参考。不是说代码写得多好，只是放出来给大家看看。   
-如果有兴趣加入字幕组，或是有想法改进这个 App，欢迎聊聊。   
+收到捐助总额：165 元（支付宝 43，微信 122）     
 
 ### Android 跑起来
-记得先在 Android Studio 里打开一个模拟器先。  
+记得先在 Android Studio 里打开一个模拟器先   
 ```
 react-native run-android
 ```
@@ -68,23 +65,19 @@ android {
 }
 ```
 
-#### 知乎专栏那边的介绍
+#### 文章介绍（知乎专栏）
 [https://zhuanlan.zhihu.com/p/27804727](https://zhuanlan.zhihu.com/p/27804727)
 
-
-### 如果有兴趣改进这个 App，欢迎提交 PR。
-具体可以改进的点包括：      
-1. 图片加载时提供一个占位符/动画/进度条。而不是一直白色一片。  
+### 可以改进的地方（欢迎提交 PR）   
+1. 图片加载时提供一个占位符/动画/进度条。而不是一直白色  
 2. 顶部下拉刷新  
-3. 滚动到底部加载更早的数据，这里可以改得更好一些。 
-4. 捐款二维码可以放到侧边栏底部，点击就保存到相册里，而不是现在深深的藏在说明里，而且差不多要滚动到正中央才看得到。
-5. 也许加一些动画效果？  
-6. 优化性能，RN 还是有点卡卡的。
-7. 尝试上线 iOS 版（不知道会不会因为版权问题被拒绝，但总得试试）
-7. 其他暂时没想到的（欢迎说出你的改进想法）
+4. 捐款二维码放到侧边栏底部，点击就保存到相册里，而不是现在深深的藏在说明里，差不多要滚动到正中央才看得到
+5. 加一些动画效果？  
+6. 优化性能，RN 还是有点卡卡的
+7. 上线 iOS 版（不知道会不会因为版权问题被拒，总得试试）
            
 参与方式：          
-在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等。  
+在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等    
  
 ### App 上架地点
 **只上线了安卓应用市场“酷安”** 
