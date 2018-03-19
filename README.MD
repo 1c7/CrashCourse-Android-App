@@ -1,46 +1,18 @@
-## CC 速成班 - Android :white_check_mark: iOS :x: - 开源 React Native 项目 (RN 版本 0.46)
-### 如果有兴趣改进这个 App，欢迎提交 PR。
-具体可以改进的点包括：      
-1. 图片加载时提供一个占位符/动画/进度条。而不是一直白色一片。  
-2. 顶部下拉刷新  
-3. 滚动到底部加载更早的数据，这里可以改得更好一些。 
-4. 捐款二维码可以放到侧边栏底部，点击就保存到相册里，而不是现在深深的藏在说明里，而且差不多要滚动到正中央才看得到。
-5. 也许加一些动画效果？  
-6. 优化性能，RN 还是有点卡卡的。
-7. 尝试上线 iOS 版（不知道会不会因为版权问题被拒绝，但总得试试）
-7. 其他暂时没想到的（欢迎说出你的改进想法）
-           
-参与方式：          
-在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等。  
-其实只要联系到我就行了，也可以给我发邮件 guokrfans#gmail.com   
-也可以去 新浪微博@糖醋陈皮 找我
+## 『CC 速成班』App - Crash Course 字幕组出品
+这个 App 聚合了所有中文字幕 Crash Course 视频       
+（建议同时安装 B 站的 App，作为打开方式）
 
-### 说明
-[B 站视频演示 App](https://www.bilibili.com/video/av13236166/)
+### 下载地址
+* Android：https://www.coolapk.com/apk/147390
+* iOS：暂无
 
-<img src="/unrelated-stuff/cc-logo.png" width="10%">       
-<img src="/unrelated-stuff/ss.png" width="45%">    
-
-注：代码和上线版一样，无删减（当然去掉了 keystore，证书当然不开源）   
-
-["CC 速成班" 下载地址（酷安）](https://www.coolapk.com/apk/147390)    
-<img src="/unrelated-stuff/ku-an.png" width="50%">   
-**只上线了安卓应用市场“酷安”** 
-豌豆荚，小米，百度，比较烦就没上。       
-腾讯应用宝拒了，所以也没上。      
-iOS 因为不想交 699 一年的会员，也没上。    
-
-
-### App 是做什么的？
-聚合了所有有字幕的 Crash Course 视频。       
-建议安装 B 站的 App 然后作为打开方式。         
-Crash Course 字幕组出品.         
-字幕组 Q 群：305631757    
-[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+### 视频演示
+https://www.bilibili.com/video/av13236166/
 
 
 ### App 长这样（真机截图）
 <img src="/unrelated-stuff/1.png" width="30%"><img src="/unrelated-stuff/2.png" width="30%"><img src="/unrelated-stuff/3.png" width="30%">
+
 
 
 ### 统计数据
@@ -122,3 +94,40 @@ android {
 
 #### 知乎专栏那边的介绍
 [https://zhuanlan.zhihu.com/p/27804727](https://zhuanlan.zhihu.com/p/27804727)
+
+
+### 如果有兴趣改进这个 App，欢迎提交 PR。
+具体可以改进的点包括：      
+1. 图片加载时提供一个占位符/动画/进度条。而不是一直白色一片。  
+2. 顶部下拉刷新  
+3. 滚动到底部加载更早的数据，这里可以改得更好一些。 
+4. 捐款二维码可以放到侧边栏底部，点击就保存到相册里，而不是现在深深的藏在说明里，而且差不多要滚动到正中央才看得到。
+5. 也许加一些动画效果？  
+6. 优化性能，RN 还是有点卡卡的。
+7. 尝试上线 iOS 版（不知道会不会因为版权问题被拒绝，但总得试试）
+7. 其他暂时没想到的（欢迎说出你的改进想法）
+           
+参与方式：          
+在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等。  
+其实只要联系到我就行了，也可以给我发邮件 guokrfans#gmail.com   
+也可以去 新浪微博@糖醋陈皮 找我
+
+
+
+<img src="/unrelated-stuff/cc-logo.png" width="10%">       
+<img src="/unrelated-stuff/ss.png" width="45%">    
+
+注：代码和上线版一样，无删减（当然去掉了 keystore，证书当然不开源）   
+ 
+<img src="/unrelated-stuff/ku-an.png" width="50%">   
+**只上线了安卓应用市场“酷安”** 
+豌豆荚，小米，百度，比较烦就没上。       
+腾讯应用宝拒了，所以也没上。      
+iOS 因为不想交 699 一年的会员，也没上。  
+
+
+### 最后
+字幕组 Q 群：305631757    
+[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+
+
