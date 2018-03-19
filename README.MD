@@ -23,6 +23,7 @@ https://www.bilibili.com/video/av13236166/
 * App：React Native 0.46  
 * 后端：Ruby on Rails 5
 * 服务器：UCloud 广东区
+注：此处代码和上线版一样，无删减（去掉了 keystore，签名证书不开源）
 
 ### 统计数据
 下载量：4900         
@@ -84,17 +85,8 @@ android {
            
 参与方式：          
 在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等。  
-其实只要联系到我就行了，也可以给我发邮件 guokrfans#gmail.com   
-也可以去 新浪微博@糖醋陈皮 找我
-
-
-
-       
-<img src="/unrelated-stuff/ss.png" width="45%">    
-
-注：代码和上线版一样，无删减（当然去掉了 keystore，证书当然不开源）   
  
-<img src="/unrelated-stuff/ku-an.png" width="50%">   
+### App 上架地点
 **只上线了安卓应用市场“酷安”** 
 豌豆荚，小米，百度，比较烦就没上。       
 腾讯应用宝拒了，所以也没上。      
