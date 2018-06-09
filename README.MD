@@ -1,5 +1,5 @@
-## CC 速成班
-聚合中文字幕 Crash Course 视频  
+## CC 速成班（开源 App)
+聚合有中文字幕 Crash Course 视频  
 
 ### 下载地址
 * Android：https://www.coolapk.com/apk/147390
