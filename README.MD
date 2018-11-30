@@ -21,7 +21,7 @@ https://www.bilibili.com/video/av13236166/
 ### 技术
 * App：React Native 0.46  
 * 后端：Ruby on Rails 5
-* 服务器：UCloud 广东区  
+* 服务器：感谢 @coolralf 提供服务器
 
 注：这里的代码和上架的 App 完全一致，无删减  
 （唯一的例外是去掉了 keystore，签名证书不开源）  
