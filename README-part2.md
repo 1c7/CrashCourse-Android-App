@@ -1,3 +1,7 @@
+## 文档第二部分
+Crash Course 字幕组 Q 群：305631757    
+
+[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
 
 
 ### 技术
@@ -8,12 +12,8 @@
 注：这里的代码和上架的 App 完全一致，无删减  
 （唯一的例外是去掉了 keystore，签名证书不开源）  
 
-### 统计数据
-下载量：4900         
-收到捐助总额：165 元（支付宝 43，微信 122）     
-
 ### Android 跑起来
-记得先在 Android Studio 里打开一个模拟器先   
+记得先在 Android Studio 里打开一个模拟器   
 ```
 react-native run-android
 ```
@@ -23,10 +23,10 @@ https://facebook.github.io/react-native/docs/signed-apk-android.html
 第一次打包和之后再打包不太一样（可以省略一些配置，因为第一次已经配置了），
 现在打包是这样的：      
 
-1. 弄一个安卓证书， 我的起名叫 cc.keystore
-2. 把 cc.keystore 放到 android/app/
+1. 弄一个安卓证书， 我的叫 cc.keystore
+2. 把 cc.keystore 放进 android/app/
 3. 跑 cd android && ./gradlew assembleRelease
-4. 生成出来的文件在： android/app/build/outputs/apk/app-release.apk
+4. 生成的文件在： android/app/build/outputs/apk/app-release.apk
 
 #### Android 写新的版本数
 https://stackoverflow.com/questions/35924721/how-to-update-version-number-of-react-native-app
@@ -62,12 +62,8 @@ android {
 在这里开个 issue 表达你有兴趣，然后大概要做什么，改进哪些地方，等等    
 
 ### App 上架地点
-**只上线了安卓应用市场“酷安”**
+**只上线了安卓应用市场”酷安“**
 豌豆荚，小米，百度，比较烦就没上。       
 腾讯应用宝拒了，所以也没上。      
-iOS 因为不想交 699 一年的会员，也没上。  
-
-
-### 最后
-字幕组 Q 群：305631757    
-[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+iOS 因为不想交 699 一年，也没上     
+  
