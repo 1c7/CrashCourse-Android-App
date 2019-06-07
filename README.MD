@@ -8,7 +8,7 @@
 
 ### 下载地址
 * Android：https://www.coolapk.com/apk/147390
-* iOS：无
+* iOS：[无法过审](https://github.com/1c7/CrashCourse-iOS-App)
 
 ### 应用截图1
 <img src="/unrelated-stuff/ss.png" width="36%">
@@ -28,7 +28,16 @@ https://www.bilibili.com/video/av13236166/
 更新原因: App 不可用, 打开无法加载数据    
 问题原因: API 域名。crashcourse.myherego.com 因为我离职所以无法使用了，现在用了 api.crashcourse.club
 解决：
-1. React native 版本升级，0.44 更新到 0.59
-2. Android Studio 3.4.1 内根据报错，清理了一些配置，能成功 Sync
-3. react navigation 从 1.0.0-beta11 更新到 3.0, 3.0 have break changes. 代码要做变更
-4. `<Image>` 里面不能包含 children, 换成 `<ImageBackground>`
+1. React Native 版本升: 0.44 到 0.59
+2. Android Studio 3.4.1 根据报错，清理了一些配置，能成功 Sync
+3. react navigation 从 1.0.0-beta11 更新到 3.0, 有 break changes. 大改了 `index.android.js` 的代码 
+4. `<Image>` 里面不能包含 children, 换成 `<ImageBackground>` 就可以了
+
+额外补充:    
+原本今天 2019-6-7 打算继续找工作, 但是突发了这个事情(App 打不开).   
+这个总得修, 也不能不修或者推给别人修,    
+开始时间: 下午1点    
+预计结束时间: 下午2点前结束      
+实际结束时间: 晚上7点20分. 主要是装 Android Studio 和 SDK，
+以及解决跑起来的问题就弄到了大概 4,5 点.
+打包然后提交到酷安就晚上7点20了，一天就砸在这玩意上了, 略有不满      
