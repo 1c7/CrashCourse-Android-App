@@ -1,6 +1,6 @@
 // API 地址全放这里
 
-var root_url = 'http://crashcourse.myherego.com';
+var root_url = 'https://api.crashcourse.club';
 
 export default Api_list = {
   newest_url: root_url + `/api/newest`,
