@@ -1,20 +1,25 @@
 ## 文档第二部分
 Crash Course 字幕组 Q 群：305631757    
 
-[Crash Course 字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
+[字幕组微博](http://weibo.com/5237129097/profile?rightmod=1&wvr=6&mod=personnumber&is_all=1)
 
 
 ### 技术
-* App：React Native 0.59    
-* React Navigation 3.0
+* App：React Native 0.59 (React Navigation 3.0)    
 * 后端：Ruby on Rails 5
 * 服务器：感谢 @coolralf 提供服务器
 
 注：这里的代码和上架的 App 完全一致，无删减  
-（唯一的例外是去掉了 keystore，签名证书不开源）  
+（唯一的例外是去掉了 keystore，打包要用的证书不开源）  
 
-### Android 跑起来
-记得先在 Android Studio 里打开一个手机模拟器，然后运行:   
+### 本地运行
+先安装基本的 npm 模块(包括 React Native)
+```
+git clone https://github.com/1c7/CrashCourse-Android-App.git
+cd CrashCourse-Android-App/
+npm install
+```
+在 Android Studio 里打开一个手机模拟器，然后运行:   
 ```
 react-native run-android
 ```

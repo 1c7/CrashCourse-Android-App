@@ -25,10 +25,10 @@ https://www.bilibili.com/video/av13236166/
 
 ## 更新日志
 ### 2019-6-7 
-更新原因: App 不可用, 打开无法加载数据
+更新原因: App 不可用, 打开无法加载数据    
 问题原因: API 域名。crashcourse.myherego.com 因为我离职所以无法使用了，现在用了 api.crashcourse.club
 解决：
 1. React native 版本升级，0.44 更新到 0.59
 2. Android Studio 3.4.1 内根据报错，清理了一些配置，能成功 Sync
 3. react navigation 从 1.0.0-beta11 更新到 3.0, 3.0 have break changes. 代码要做变更
-4. <Image> 里面不能包含元素, 换成 <ImageBackground>
+4. `<Image>` 里面不能包含 children, 换成 `<ImageBackground>`

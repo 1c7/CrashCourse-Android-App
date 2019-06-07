@@ -1,4 +1,5 @@
-// 定制的侧边栏
+// 侧边栏 2019-6-7 废弃
+// 因为 React Navigation 从 1.0 升级到 3.0 我今天懒得改
 import React from 'react';
 import {
   Image,
