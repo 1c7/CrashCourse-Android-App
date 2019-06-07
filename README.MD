@@ -14,7 +14,8 @@
 <img src="/unrelated-stuff/ss.png" width="36%">
 
 ### 应用截图2
-<img src="/unrelated-stuff/tab1.jpg" width="30%"><img src="/unrelated-stuff/tab2.jpg" width="30%"><img src="/unrelated-stuff/side.jpg" width="30%">      
+<img src="/unrelated-stuff/tab1.jpg" width="30%"><img src="/unrelated-stuff/tab2.jpg" width="30%">
+
 
 ### 视频演示
 https://www.bilibili.com/video/av13236166/
@@ -22,9 +23,9 @@ https://www.bilibili.com/video/av13236166/
 ### 更多说明
 在 readme-part2.md
 
-### 日志
-#### 2019-6-7 
-问题描述: App 不可用, 打开无法加载数据
+## 更新日志
+### 2019-6-7 
+更新原因: App 不可用, 打开无法加载数据
 问题原因: API 域名。crashcourse.myherego.com 因为我离职所以无法使用了，现在用了 api.crashcourse.club
 解决：
 1. React native 版本升级，0.44 更新到 0.59
