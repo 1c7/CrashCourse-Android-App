@@ -1,14 +1,17 @@
 ## 应用名称：CC 速成班
-说明：CC 是 Crash Course 的缩写。Crash Course 是一个知名的教育类 Youtube 频道。
+CC 是 Crash Course 的缩写。是 Youtube 上的一个教育类频道。
 
-介绍：这是一个手机 App, 上面有中文字幕的 Crash Course 视频。  
-内容由字幕组成员维护。点击内容会跳转到 Bilibili。推荐同时安装 Bilibili 的移动端 App 搭配使用。     
+### 介绍
+这是一个安卓 App    
+App 内容是聚合有中文字幕的 Crash Course 视频。      
+内容由字幕组自己维护。     
+点击内容会跳转到 B站, 推荐同时安装 B站 的 App 搭配使用。        
 
-这个 Github 库是 App 的代码，开源供参考。   
+这里是 App 的代码       
 
 ### 下载地址
-* Android：https://www.coolapk.com/apk/147390
-* iOS：[无法过审](https://github.com/1c7/CrashCourse-iOS-App)
+* Android: [酷安应用市场](https://www.coolapk.com/apk/147390)
+* iOS: [无法过审](https://github.com/1c7/CrashCourse-iOS-App)
 
 ### 应用截图1
 <img src="/unrelated-stuff/ss.png" width="36%">
