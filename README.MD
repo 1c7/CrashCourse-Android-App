@@ -24,7 +24,8 @@ https://www.bilibili.com/video/av13236166/
 
 ### 日志
 #### 2019-6-7 
-App 不可用（打开无法加载数据）问题原因是 API 域名。请耐心等待酷安上发新版，安装更新后可解决问题
+问题描述: App 不可用, 打开无法加载数据
+问题原因: API 域名。crashcourse.myherego.com 因为我离职所以无法使用了，现在用了 api.crashcourse.club
 解决：
 1. React native 版本升级，0.44 更新到 0.59
 2. Android Studio 3.4.1 内根据报错，清理了一些配置，能成功 Sync
