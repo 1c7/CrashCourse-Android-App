@@ -16,11 +16,9 @@ Crash Course 字幕组 Q 群：305631757
 先安装基本的 npm 模块(包括 React Native)
 ```
 git clone https://github.com/1c7/CrashCourse-Android-App.git
-cd CrashCourse-Android-App/
+cd CrashCourse-Android-App/SourceCode/
 npm install
-```
-在 Android Studio 里打开一个手机模拟器，然后运行:   
-```
+# 在 Android Studio 里打开一个手机模拟器，然后运行:   
 react-native run-android
 ```
 
