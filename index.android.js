@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
 } from 'react-native';
 import { 
-  StackNavigator, 
-  TabNavigator, 
-  DrawerNavigator,
-} from 'react-navigation';
+  createStackNavigator, 
+  createAppContainer, 
+  createBottomTabNavigator,
+} from "react-navigation";
 
 import HomeScreen from './src/HomeScreen'; // 首页
 import CategoryScreen from './src/CategoryScreen'; // 系列
 import CategoryListScreen from './src/CategoryListScreen'; // 系列列表
-import CrashCourseDrawer from './src/CrashCourseDrawer'; // 侧边栏
+// import CrashCourseDrawer from './src/CrashCourseDrawer'; // 侧边栏
 
-const Tab = TabNavigator({
-  Home: { screen: HomeScreen }, // 最新
-  Category: { screen: CategoryScreen }, // 系列
+const CategoryStack = createStackNavigator({
+  Category: CategoryScreen,
+  CategoryList: CategoryListScreen,
 });
 
-// https://reactnavigation.org/docs/navigators/drawer
-const MyApp = DrawerNavigator({
-  Home: { screen: Tab },
-  Category: { screen: CategoryScreen },
-  CategoryList: { screen: CategoryListScreen },
-},{
-  drawerWidth: 240,
-  contentComponent: props => <CrashCourseDrawer></CrashCourseDrawer>
+const TabNavigator = createBottomTabNavigator({
+  Home: HomeScreen,
+  Category: { screen: CategoryStack, navigationOptions: {
+    title: '系列'
+  }},
 });
 
-// DrawerNavigator 里包一个 Tab
-// 如果不这么写的话，点击系列的方块，那个列表不弹出来。
-// 还有就是 Android 下特意设置了 header null (iOS 不是)
-// 这样就不会又有 tab 又有 header
+const AppNavigator = createAppContainer(TabNavigator);
 
-AppRegistry.registerComponent('haha', () => MyApp);
+export default class App extends React.Component {
+  render() {
+    return <AppNavigator /* persistenceKey="if-you-want-it" */ />;
+  }
+}
+
+AppRegistry.registerComponent('haha', () => App);

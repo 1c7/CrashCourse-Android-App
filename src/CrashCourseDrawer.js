@@ -1,21 +1,13 @@
 // 定制的侧边栏
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Image,
-  Button,
   StyleSheet,
   Text,
-  ScrollView,
   View,
   TouchableOpacity,
   Linking
 } from 'react-native';
-import { 
-  StackNavigator, 
-  TabNavigator, 
-  DrawerNavigator,
-  DrawerItems 
-} from 'react-navigation';
 import Api_list from './Api';
 
 export default class CrashCourseDrawer extends React.Component {
@@ -23,14 +15,15 @@ export default class CrashCourseDrawer extends React.Component {
     const weibo = Api_list.weibo_url;
     const note = Api_list.note_url;
     return(
-    <Image source={require('../img/cc-bg-dark.jpg')} style={styles.container}>
+      <View style={styles.container}>
+    {/* // <Image source={require('../img/cc-bg-dark.jpg')} style={styles.container}> */}
       <View style={styles.bigLogoContainer}>
         <Image source={require('../img/main.png')} style={styles.bigLogo}></Image>
       </View>
       
       <View style={{flex: 1, alignItems:'center', justifyContent:'center', width:240}}>
         <Text style={{color:'#fff', fontSize: 16, fontWeight:'bold',textAlign:'center'}}>
-          Don't forget to be awesome
+          Don't forget to be Awesome
         </Text>
       </View>
       
@@ -44,7 +37,8 @@ export default class CrashCourseDrawer extends React.Component {
           <Text style={{color:'#fff', marginLeft: 12, marginTop: 2, fontSize: 14}}>Crash Course 字幕组</Text>
         </TouchableOpacity>
       </View>
-    </Image>
+    {/* </Image> */}
+    </View>
     )
   }
 };

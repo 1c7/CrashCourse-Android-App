@@ -1,10 +1,9 @@
 // 最新
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
   View,
-  WebView,
   FlatList,
   Button,
   TouchableOpacity,

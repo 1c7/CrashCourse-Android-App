@@ -4,11 +4,9 @@ import {
   StyleSheet,
   View,
   Text,
-  Button,
   TouchableOpacity,
-  ActivityIndicator,
-  Image,
-  Platform
+  Platform,
+  ImageBackground,
 } from 'react-native';
 import Api_list from './Api';
 
@@ -63,14 +61,14 @@ export default class CategoryScreen extends Component {
       <TouchableOpacity key={i} style={{flex: 1, flexDirection: 'row'}} 
           onPress = {() => this.props.navigation.navigate('CategoryList', {serie_id: data.id, serie_title:data.title})}>
         <View style={styles.container} >
-        <Image style={styles.image} source={{uri:data.image}}>
+        <ImageBackground style={styles.image} source={{uri:data.image}}>
           <View style={styles.overlay}/>
           <View style={styles.overlayTextView}>
               <Text style={styles.text}>{data.title}</Text>
               <Text style={styles.en_text}>{data.english_name}</Text>
           </View>
           <Text style={styles.subtitle_text}>{data.subtitle}</Text>
-        </Image>
+        </ImageBackground>
       </View>
       </TouchableOpacity>
 

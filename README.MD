@@ -25,3 +25,8 @@ https://www.bilibili.com/video/av13236166/
 ### 日志
 #### 2019-6-7 
 App 不可用（打开无法加载数据）问题原因是 API 域名。请耐心等待酷安上发新版，安装更新后可解决问题
+解决：
+1. React native 版本升级，0.44 更新到 0.59
+2. Android Studio 3.4.1 内根据报错，清理了一些配置，能成功 Sync
+3. react navigation 从 1.0.0-beta11 更新到 3.0, 3.0 have break changes. 代码要做变更
+4. <Image> 里面不能包含元素, 换成 <ImageBackground>
