@@ -1,7 +1,7 @@
 // 点击“系列”里任意一个方块显示的列表
 // 完全复制自 HomeScreen.js 做了些
 // 没做分页
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
